@@ -1,0 +1,13 @@
+.layout__container {
+  display: flex;
+  height: 100vh;
+}
+
+.main__container {
+  flex: 1;
+  padding: 0px 20%;
+}
+
+.footer__container {
+  text-align: center;
+}

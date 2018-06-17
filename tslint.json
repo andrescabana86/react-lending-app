@@ -1,0 +1,20 @@
+{
+  "extends": "tslint-config-airbnb",
+  "rules": {
+    "variable-name": [true, "check-format", "ban-keywords", "allow-leading-underscore", "allow-pascal-case"],
+    "jsx-boolean-value": ["never"],
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "import-name": false,
+    "function-name": [
+      true,
+      {
+        "function-regex": "^[a-zA-Z$][\\w\\d]+$",
+        "method-regex": "^[a-z$][\\w\\d]+$",
+        "private-method-regex": "^[a-z$][\\w\\d]+$",
+        "protected-method-regex": "^[a-z$][\\w\\d]+$",
+        "static-method-regex": "^[a-z$][\\w\\d]+$"
+      }
+    ]
+  }
+}
