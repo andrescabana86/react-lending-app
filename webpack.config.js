@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -57,7 +57,7 @@ module.exports = {
     extensions: ['.js', '.json', '.ts', '.tsx']
   },
   plugins: [
-    new CleanWebpackPlugin(['dist', 'reports']),
+    new CleanWebpackPlugin(['dist', 'reports', 'coverage']),
     new webpack.DefinePlugin({
       'process.env': {
         'ENV': JSON.stringify(process.env.PROD),

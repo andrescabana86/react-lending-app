@@ -27,8 +27,9 @@ $ chrome --disable-web-security --user-data-dir --allow-running-insecure-content
 ```
 
 ## TODO's
+- TODO: separate dev from prod building
+- TODO: Implement performance test reports with lighthouse
 - TODO: React hash routing
-- TODO: Implement performance test reports
 - TODO: i18Next internationalization
 - TODO: Implement ActionCreators
 - TODO: Implement reselect
