@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path');
 
 module.exports = {
@@ -34,7 +36,16 @@ module.exports = {
           'file-loader', {
             loader: 'image-webpack-loader',
             options: {
-              disable: true, // webpack@2.x and newer
+              pngquant: {
+                quality: '65-90',
+                speed: 4
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              webp: {
+                quality: 75
+              }
             },
           },
         ],
@@ -46,6 +57,7 @@ module.exports = {
     extensions: ['.js', '.json', '.ts', '.tsx']
   },
   plugins: [
+    new CleanWebpackPlugin(['dist', 'reports']),
     new webpack.DefinePlugin({
       'process.env': {
         'ENV': JSON.stringify(process.env.PROD),
@@ -59,6 +71,10 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
+    }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      reportFilename: '../reports/bundle.html'
     })
   ]
 };

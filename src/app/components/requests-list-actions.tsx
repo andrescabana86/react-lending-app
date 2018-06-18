@@ -20,7 +20,7 @@ export const RequestsListActions:React.SFC<IRequestsListActions> =
       </Link>
       <Divider type="vertical" />
       <a onClick={() => handleDelete(record)}>
-        Borrar
+        Eliminar
       </a>
     </span>
   );

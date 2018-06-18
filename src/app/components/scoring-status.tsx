@@ -15,10 +15,10 @@ export const ScoringStatus:React.SFC<any> =
   let text = '';
   if (!loading && data && data.approved) {
     icon = successIcon;
-    text = 'Prestamo APROBADO!';
+    text = 'CALIFICA para crédito!';
   } else if (!loading && data && !data.approved) {
     icon = failIcon;
-    text = 'No apto para prestamo.';
+    text = 'No apto para crédito.';
   } else if (loading) {
     icon = loadingSpinner;
     text = 'Espere un momento...';
