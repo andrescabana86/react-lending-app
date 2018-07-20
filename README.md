@@ -27,10 +27,13 @@ $ chrome --disable-web-security --user-data-dir --allow-running-insecure-content
 ```
 
 ## TODO's
+- TODO: use test AAA convention
 - TODO: separate dev from prod building
-- TODO: Implement performance test reports with lighthouse
 - TODO: add unit test
 - TODO: add e2e testing
+- TODO: Implement performance test reports with lighthouse
+- TODO: Implement coverage reports
+- TODO: Implement lint reports
 - TODO: React hash routing
 - TODO: i18Next internationalization
 - TODO: Implement ActionCreators
